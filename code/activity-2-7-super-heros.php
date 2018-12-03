@@ -235,8 +235,8 @@
       $team = array(array("Batman", "Superman", "Flash", "Iron Man", "Spiderman"), array("Thor", "Hulk", "Captain America", "Cyborg", "Wolverine"));
       $numberOfColumns = max(count($team[0]), count($team[1]));
 
-      $team0battle = rand(0, count($team[0]));
-      $team1battle = rand(0, count($team[1]));
+      $team0battle = rand(0, count($team[0]) - 1);
+      $team1battle = rand(0, count($team[1]) - 1);
 
       for ($i = 0; $i < $numberOfColumns; $i++) {
         echo "<tr>";
