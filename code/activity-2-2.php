@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Programming Languages</title>
-  <meta name="description" content="Input anf Math">
+  <meta name="description" content="Input and Math">
   <meta name="author" content="Gabriel Oliveira">
   <link rel="shortcut icon" href="images/logo.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -104,7 +104,7 @@
       -moz-border-radius: 4px;
       border-radius: 4px;
     }
-    
+
     .home-button {
       background-color: #1e90ff;
       color: #ffffff;

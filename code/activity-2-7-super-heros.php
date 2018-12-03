@@ -14,11 +14,6 @@
       padding: 0;
       width: 100%;
     }
-
-    body {
-      font-family: "Futura";
-      background-color: #fff;
-    }
 		.home-button {
       background-color: #1e90ff;
       color: #ffffff;
@@ -26,6 +21,10 @@
       margin-left: 1em;
       font-size: 16px;
       cursor: pointer;
+    }
+    body {
+      font-family: "Futura";
+      background-color: #fff;
     }
 
     #container {
@@ -210,48 +209,57 @@
 			color: #4287f4;
 			border-bottom: 0.5px solid #4287f4;
 		}
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
     </style>
 	</head>
-<body>
-	<nav>
+  <body>
+		<nav>
     <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
   </nav>
 	<div id="container">
-	<header id="page_header">
-		<h1>Volume of an Ice Cream Cone</h1>
-	</header>
-	<h3>Background Information</h3>
-	<p>This is a function that calculates the volume of an ice cream cone by adding together the volume of the cone and the volume of the scoop, assuming that there is only one scoop and the radius of the scoop is the same as the cone. The ice cream inside the cone will not be counted as it is inside the cone, so only half of the scoop's volume and the cone's volume will be counted.</p><hr />
-	<img src="https://ncalculators.com/images/formulas/sphere.jpg" alt="Volume of Sphere" title="Volume of Sphere" height="200px"; />
-	<img src="https://www.onlinemathlearning.com/image-files/xvolume-of-cone.png.pagespeed.ic.2-YhHAnIvd.png" alt="Volume of Cone" title="Volume of Cone" height="200px"; />
-  <form name="form" action="activity-2-6b-ice-cream-cone.php" method="post" id="form">
-    Radius of Cone/Sphere: (cm) <input type="text" name="radius" value="" /><br />
-    Height of Cone: (cm) <input type="text" name="height" value="" /><br />
-    <input type="submit" name="submit" value="Submit" class="submit-btn btn btn-pill" />
-  </form>
-  <?php
-  if ($_POST['submit']) {
-	echo "<br />";
-	echo "<div id='output'>";
-    function totalVolume() {
-			$height = $_POST['height'];
-	    $radius = $_POST['radius'];
-			if ($height == "" || $radius == "") {
-				echo "Error! You must input height and radius!";
-			} else {
-      $conevol = round(($height * pi() * pow($radius, 2)) / 3);
-      $spherevol = round(4 * (pi() * pow($radius, 3)) / 3);
-      $totalvol = $conevol + ($spherevol / 2);
-      echo "The volume of cone is " . $conevol . "cm&#179;.<br />";
-			echo "The volume of the scoop is " . $spherevol . "cm&#179;.<br />";
-      echo "Assuming the ice cream inside the cone is not counted, the total volume of the ice cream cone is <b>" . $totalvol . "cm&#179;</b>.<br />";
-			echo "</div><br />";
-			echo '<img src="https://content.mycutegraphics.com/graphics/icecream/ice-cream-cone-clip-art.png" alt="icecreamcone" title="Ice Cream Cone" height="200px" />';
-    }
-	}
-    totalVolume();
-  }
-   ?>
- </div>
+    <header id="page_header">
+      <h1>Multidimensional Arrays</h1>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Team 1:</th>
+          <th>Team 2:</th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php
+      $team = array(array("Batman", "Superman", "Flash", "Iron Man", "Spiderman"), array("Thor", "Hulk", "Captain America", "Cyborg", "Wolverine"));
+      $numberOfColumns = max(count($team[0]), count($team[1]));
+
+      $team0battle = rand(0, count($team[0]));
+      $team1battle = rand(0, count($team[1]));
+
+      for ($i = 0; $i < $numberOfColumns; $i++) {
+        echo "<tr>";
+        echo "<td>";
+        echo $team[0][$i];
+        if ($i == $team0battle) {
+          echo " (selected)";
+        }
+        echo "</td>";
+
+        echo "<td>";
+        echo $team[1][$i];
+        if ($i == $team1battle) {
+          echo " (selected)";
+        }
+        echo "</td>";
+
+        echo "</tr>";
+      }
+
+       ?>
+     </tbody>
+   </table>
+  </div>
 </body>
 </html>

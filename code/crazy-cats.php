@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
   <link rel="shortcut icon" href="images/logo.ico">
   <title>Crazy Cats! - Lesson Evaluation</title>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     body {
     	padding: 0;
@@ -13,7 +13,14 @@
       background-image: url("images/Webp.net-resizeimage.jpg");
       color: #ffffff;
     }
-
+		.home-button {
+      background-color: #1e90ff;
+      color: #ffffff;
+      padding: 12px 16px;
+      margin-left: 1em;
+      font-size: 16px;
+      cursor: pointer;
+    }
     #main {
       display: block;
       margin-left: auto;
@@ -59,6 +66,9 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
+	<nav>
+    <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
+  </nav>
   <div id="main">
     <h1>Crazy Cats!</h1>
 

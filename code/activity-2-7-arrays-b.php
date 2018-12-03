@@ -14,11 +14,6 @@
       padding: 0;
       width: 100%;
     }
-
-    body {
-      font-family: "Futura";
-      background-color: #fff;
-    }
 		.home-button {
       background-color: #1e90ff;
       color: #ffffff;
@@ -26,6 +21,10 @@
       margin-left: 1em;
       font-size: 16px;
       cursor: pointer;
+    }
+    body {
+      font-family: "Futura";
+      background-color: #fff;
     }
 
     #container {
@@ -212,46 +211,63 @@
 		}
     </style>
 	</head>
-<body>
-	<nav>
+  <body>
+		<nav>
     <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
   </nav>
 	<div id="container">
-	<header id="page_header">
-		<h1>Volume of an Ice Cream Cone</h1>
-	</header>
-	<h3>Background Information</h3>
-	<p>This is a function that calculates the volume of an ice cream cone by adding together the volume of the cone and the volume of the scoop, assuming that there is only one scoop and the radius of the scoop is the same as the cone. The ice cream inside the cone will not be counted as it is inside the cone, so only half of the scoop's volume and the cone's volume will be counted.</p><hr />
-	<img src="https://ncalculators.com/images/formulas/sphere.jpg" alt="Volume of Sphere" title="Volume of Sphere" height="200px"; />
-	<img src="https://www.onlinemathlearning.com/image-files/xvolume-of-cone.png.pagespeed.ic.2-YhHAnIvd.png" alt="Volume of Cone" title="Volume of Cone" height="200px"; />
-  <form name="form" action="activity-2-6b-ice-cream-cone.php" method="post" id="form">
-    Radius of Cone/Sphere: (cm) <input type="text" name="radius" value="" /><br />
-    Height of Cone: (cm) <input type="text" name="height" value="" /><br />
-    <input type="submit" name="submit" value="Submit" class="submit-btn btn btn-pill" />
-  </form>
-  <?php
-  if ($_POST['submit']) {
-	echo "<br />";
-	echo "<div id='output'>";
-    function totalVolume() {
-			$height = $_POST['height'];
-	    $radius = $_POST['radius'];
-			if ($height == "" || $radius == "") {
-				echo "Error! You must input height and radius!";
-			} else {
-      $conevol = round(($height * pi() * pow($radius, 2)) / 3);
-      $spherevol = round(4 * (pi() * pow($radius, 3)) / 3);
-      $totalvol = $conevol + ($spherevol / 2);
-      echo "The volume of cone is " . $conevol . "cm&#179;.<br />";
-			echo "The volume of the scoop is " . $spherevol . "cm&#179;.<br />";
-      echo "Assuming the ice cream inside the cone is not counted, the total volume of the ice cream cone is <b>" . $totalvol . "cm&#179;</b>.<br />";
-			echo "</div><br />";
-			echo '<img src="https://content.mycutegraphics.com/graphics/icecream/ice-cream-cone-clip-art.png" alt="icecreamcone" title="Ice Cream Cone" height="200px" />';
+    <header id="page_header">
+      <h1>Associative Arrays</h1>
+    </header>
+    <h3>Background Information</h3>
+    <p>An associative array is also known as a map or dictionary array.  It is an abstract data type composed of a collection of key/value pairs.</p>
+    <p>In this assignment, I have assigned the planets of the solar system to one array, each with a corresponding acceleration in m/s&#178;. You can type in a range of accelerations, from the starting acceleration to the ending acceleration, and the program uses a for each loop to only display the planets that have accelerations within the range that you input.</p><hr />
+    <form name="form" action="activity-2-7-arrays-b.php" method="post" id="form">
+      Starting Acceleration (m/s&#178;): <input type="text" name="start" value="" /><br />
+      Ending Acceleration (m/s&#178;): <input type="text" name="end" value="" /><br /><br />
+      <input type="submit" name="submit" value="Show Planets" class="submit-btn btn btn-pill" /><br />
+    </form><br />
+    <?php
+    if ($_POST['submit']) {
+      if ($_POST['start'] < $_POST['end']) {
+      echo '<div id="output">';
+      $acceleration['Mercury'] = 3.76;
+      $acceleration['Venus'] = 9.04;
+      $acceleration['Earth'] = 9.8;
+      $acceleration['Mars'] = 3.77;
+      $acceleration['Jupiter'] = 23.6;
+      $acceleration['Saturn'] = 10.06;
+      $acceleration['Uranus'] = 8.87;
+      $acceleration['Neptune'] = 11.23;
+      $planet_image['Mercury'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/1200px-Mercury_in_color_-_Prockter07-edit1.jpg" style="height: 100px; width: 100px;" />';
+      $planet_image['Venus'] = '<img src="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2014/whyisvenusso.jpg" style="height: 100px; width: 100px;" />';
+      $planet_image['Earth'] = '<img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2018/earthsoxygen.jpg" style="height: 100px; width: 100px;" />';
+      $planet_image['Mars'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/1200px-OSIRIS_Mars_true_color.jpg" style="height: 100px; width: 100px;" />';
+      $planet_image['Jupiter'] = '<img src="http://cdn.sci-news.com/images/enlarge3/image_4461e-Jupiter.jpg" style="height: 100px; width: 100px;" />';
+      $planet_image['Saturn'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/220px-Saturn_during_Equinox.jpg" style="height: 100px; width: 100px;" />';
+      $planet_image['Uranus'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/220px-Uranus2.jpg" style="height: 100px; width: 100px;" />';
+      $planet_image['Neptune'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/220px-Neptune_Full.jpg" style="height: 100px; width: 100px;" />';
+      $start = $_POST['start'];
+      $end = $_POST['end'];
+      echo "<p>Planets with an acceleration of in between <strong>" . $start . "</strong>m/s&#178; and <strong>" . $end . "</strong>m/s&#178;</p>";
+      foreach ($acceleration  as $planet => $acc) {
+          if ($acc >= $start && $end >= $acc) {
+            echo "<div>";
+            echo "<p>Planet: <strong>" . $planet . "</strong>, Acceleration: <strong>" . $acc . "</strong>m/s&#178;</p>";
+            echo "" . $planet_image[$planet] . "";
+            echo "</div>";
+          } else {
+              echo "";
+          }
+        }
+        echo "</div>";
+      } else if ($_POST['start'] >= $_POST['end']) {
+        echo '<div id="output">';
+        echo "Error! Starting acceleration must be smaller than ending acceleration";
+        echo "</div>";
+      }
     }
-	}
-    totalVolume();
-  }
-   ?>
- </div>
+     ?>
+  </div>
 </body>
 </html>

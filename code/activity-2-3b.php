@@ -272,7 +272,7 @@
           echo "<h2 style='text-align: center'>You selected: $number and $color.</h2>";
           echo '<h2 style="text-align: center">Scissors</h2>';
           echo '<img class="image"src="https://www.wikihow.com/images/thumb/1/14/Play-Rock-Paper-Scissors-Lizard-Spock-Step-2Bullet2.jpg/aid614957-v4-728px-Play-Rock-Paper-Scissors-Lizard-Spock-Step-2Bullet2.jpg.webp" />';
-        } else if ($number == "" || $color == "") {
+        } else {
           echo '<h2 style="text-align: center">Nothing specific to output...sorry try again.</h2>';
         }
       }

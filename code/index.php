@@ -311,6 +311,8 @@
 						<li><a href="activity-2-6c-terminal-velocity.php">Activity 2.6c: Terminal Velocity</a></li>
 						<li><a href="activity-2-6d-bmi.php">Activity 2.6d: Body Mass Index</a></li>
 						<li><a href="activity-2-7-arrays-a.php">Activity 2.7a: Numeric Arrays</a></li>
+						<li><a href="activity-2-7-arrays-b.php">Activity 2.7b: Associative Arrays</a></li>
+						<li><a href="activity-2-7-super-heros.php">Activity 2.7c: Multidimensional Arrays</a></li>
 					</ul>
 				</div>
 

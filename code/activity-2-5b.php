@@ -7,6 +7,7 @@
 		<meta name="description" content="Gabriel Oliveira's webpage for the ICS3UO course.">
 		<meta name="author" content="Gabriel Oliveira">
 		<link rel="shortcut icon" href="images/logo.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     html, body {
       height: 100%;
@@ -14,10 +15,17 @@
       padding: 0;
       width: 100%;
     }
-
+		.home-button {
+      background-color: #1e90ff;
+      color: #ffffff;
+      padding: 12px 16px;
+      margin-left: 1em;
+      font-size: 16px;
+      cursor: pointer;
+    }
     body {
       font-family: "Futura";
-      background-color: #f9fbfb;
+      background-color: #fff;
     }
 
     #container {
@@ -25,7 +33,7 @@
       margin: 0 auto;
       padding: 15px;
       width: 960px;
-      background-color: #fff;
+      background-color: #f9fbfb;
     }
 
     #page_header {
@@ -205,6 +213,9 @@
     </style>
 	</head>
   <body>
+		<nav>
+    <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
+  </nav>
   <div id="container">
   <header id="page_header">
     <h1>PHP For Loops</h1>

@@ -7,6 +7,7 @@
 		<meta name="description" content="Gabriel Oliveira's webpage for the ICS3UO course.">
 		<meta name="author" content="Gabriel Oliveira">
 		<link rel="shortcut icon" href="images/logo.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     body {
       font-family: "Futura";
@@ -19,7 +20,14 @@
       line-height: 2em;
       background-color: #ddd;
     }
-
+		.home-button {
+      background-color: #1e90ff;
+      color: #ffffff;
+      padding: 12px 16px;
+      margin-left: 1em;
+      font-size: 16px;
+      cursor: pointer;
+    }
     .calculator-section {
       border: 1px solid #666;
       margin-bottom: 2em;
@@ -44,9 +52,12 @@
   </style>
 	</head>
   <body>
-    <h1>PHP Basic Calculator</h1>
-    <h2>Choose any two numbers and operation, and click submit to see the answer</h2>
-
+		<nav>
+    <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
+  </nav>
+    <h1 style="text-align: center">PHP Basic Calculator</h1>
+    <h2 style="text-align: center">Choose any two numbers and operation, and click submit to see the answer</h2>
+	<div align="center">
     <div class="calculator-section">
       <h3>Two Number Operations</h3>
       <form id="two-number-operations" name="form" action="activity-2-4.php" method="post">
@@ -211,5 +222,6 @@
          ?>
       </div>
     </div>
+	</div>
   </body>
 </html>
