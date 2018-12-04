@@ -194,7 +194,8 @@
 		.hero_card {
 			background-color: #ff8533;
 			flex: 0 1 14%;
-			padding: 1em 1em 1em 1em;
+			padding: 0.6em 1em 0.2em 1em;
+			min-height: 162px;
 			border-left: 2px solid #fff;
 			border-top: 2px solid #fff;
 			border-right: 2px solid #b34800;
@@ -202,7 +203,7 @@
 		}
 
     .hero_card img {
-			height: 100px;
+			height: 90px;
 			display: block;
 			margin: 0 auto;
     }
@@ -211,7 +212,7 @@
 			text-align: center;
 			color: #ffe682;
 			text-shadow: 2px 2px #b38f00;
-			margin-bottom: 0;
+			margin: 0;
 		}
 
 		.team_cards .selected {
@@ -271,6 +272,13 @@
 	    margin-left: auto;
 	    margin-right: auto;
 	  }
+
+		.winner_message {
+			font-size: 2em;
+			font-weight: bold;
+			margin-right: 2em;
+		}
+
     </style>
 	</head>
 
@@ -307,9 +315,24 @@
 				$hero2 = $team2[$fighter2];
 
 				$chosen_skill = $_POST['skill'];
+
+				if ($hero1[$chosen_skill] > $hero2[$chosen_skill]) {
+					$winner = $hero1[0];
+				} else {
+					$winner = $hero2[0];
+				}
+
+				$figthers_call = "&nbsp;<span class='winner_message'>" . $winner . " wins!</span>";
+				$figthers_call .= '<a class="btn pill" href="' . $_SERVER['PHP_SELF'] . '">Try again</a>';
+
 			} else {
 				$fighter1 = rand(0, count($team1) - 1);
       	$fighter2 = rand(0, count($team2) - 1);
+
+				$hero1 = $team1[$fighter1];
+				$hero2 = $team2[$fighter2];
+
+				$figthers_call = "<strong>" . $hero1[0] . "</strong>&nbsp;has been chosen to battle&nbsp;<strong>" . $hero2[0] . "</strong>!";
 			}
 		?>
 
@@ -337,7 +360,7 @@
 
 		<div class="fighters_call">
 			<p>
-				<strong><? echo $team1[$fighter1][0] ?></strong>&nbsp;has been chosen to battle&nbsp;<strong><? echo $team2[$fighter2][0] ?></strong>!
+				<? echo $figthers_call ?>
 			</p>
 		</div>
 
@@ -347,17 +370,17 @@
 		 <div class="skill_selections">
 			 <div>
 				 <input type="radio" id="strength" name="skill" value="strength"
-				 <?php echo $chosen_skill == "strength" ? "checked" : ""?>>
+				 <?php echo $chosen_skill == "strength" ? "checked" : ""?> "required">
 				 <label for="strength">Strength</label>
 			 </div>
 			 <div>
 				 <input type="radio" id="speed" name="skill" value="speed"
-				 <?php echo $chosen_skill == "speed" ? "checked" : ""?>>
+				 <?php echo $chosen_skill == "speed" ? "checked" : ""?> "required">
 				 <label for="speed">Speed</label>
 			 </div>
 			 <div>
 				 <input type="radio" id="smarts" name="skill" value="smarts"
-				 <?php echo $chosen_skill == "smarts" ? "checked" : ""?>>
+				 <?php echo $chosen_skill == "smarts" ? "checked" : ""?> "required">
 				 <label for="smarts">Smarts</label>
 			 </div>
 			 <div>
@@ -365,17 +388,6 @@
 			</div>
 		</div>
    </form>
-  <?php
-		if ($_POST['submit']) {
-
-			if ($hero1[$chosen_skill] > $hero2[$chosen_skill]) {
-				echo "<h1>" . $hero1[0] . " wins!</h1>";
-			} else {
-				echo "<h1>" . $hero2[0] . " wins!</h1>";
-			}
-			echo '<div><a class="btn pill" href="' . $_SERVER['PHP_SELF'] . '">Try again</a></div>';
-    }
-  ?>
   </div>
 </body>
 </html>
