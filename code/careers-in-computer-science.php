@@ -35,7 +35,6 @@
 			height: 100%;
       width: 960px;
       background-color: #f9fbfb;
-			overflow: auto;
     }
 
     #page_header {
@@ -284,6 +283,8 @@
 			border: 1px solid black;
 			background-color: #c7c8c8;
 			width: 450px;
+			table-layout: fixed;
+			height: 100%;
 		}
 		#collegetable {
 			position: absolute;
@@ -291,9 +292,12 @@
 			border: 1px solid black;
 			background-color: #c7c8c8;
 			width: 450px;
+			table-layout: fixed;
+			height: 100%;
 		}
-
-
+		h4, h5 {
+			text-align: center;
+		}
     </style>
 	</head>
 
@@ -311,18 +315,57 @@
 	<table id="universitytable">
 		<tr>
 		<td>
-				<h2>University Programs</h2>
+				<h2 style="text-align: center">University Programs</h2>
 		</td>
 		</tr>
 		<tr>
 			<td>
 				<h4>Computer Science at University of Toronto</h4>
 				<p>This program is a 4 year program that studies computer science at the University of Toronto. They look for notations for describing computations, and programming methodologies that facilitate the production of manageable and efficient software. In the theory of computation area, they study resource requirements in time and memory of many basic computational tasks.</p>
+				<strong><h5 style="text-align: center">Requirements</h5></strong>
+				<ul>
+					<li>Ontario Secondary School Diploma</li>
+					<li>Grade 12 English (ENG4U) credit</li>
+					<li>Grade 12 Calculus and Vectors (MCV4U) credit</li>
+					<li>Four additional Grade 12 university-level or university/college-level courses</li>
+					<li>(It is expected you would have completed Advanced Functions as a prerequisite to Calculus and Vectors)
+					<li>A grade average in at least the low 90s</li>
+				</ul>
+				<strong><h5>This program will award you a Bachelor of Science degree.</h5></strong>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<h4>Computer uee at uee university</h4>
+				<h4>Applied Computing at University of Windsor</h4>
+				<p>This program is a 4 year program that studies applied computing at the University of Windsor. It provides progressive, innovative tools and technology in computing, practical experience in developing software systems and the IT skills valued by industry.</p>
+				<strong><h5 style="text-align: center">Requirements</h5></strong>
+				<ul>
+					<li>Ontario Secondary School Diploma</li>
+					<li>Grade 12 English (ENG4U) credit</li>
+					<li>Grade 12 Advanced Functions (MHF4U) credit</li>
+					<li>Four additional Grade 12 university-level or university/college-level courses</li>
+					<li>Grade 12 Calculus and Vectors (MCV4U) is not required but is highly reccomended</li>
+					<li>A minimum average of 70% is required in math courses</li>
+					<li>A grade average in at least the low 70s</li>
+				</ul>
+				<strong><h5>This program will award you a Bachelor of Computer Science degree.</h5></strong>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h4>Computer Science at Queens University</h4>
+				<p>This program is a 4 year program that studies computer science at Queens University. Computer Science, which is based on a firm foundation in logic and discrete mathematics, includes the study of computer hardware (the design of the machines themselves), computer software (the programs that cause the machines to perform useful tasks), and human-computer interaction (effective communication between people and their computing tools).</p>
+				<strong><h5 style="text-align: center">Requirements</h5></strong>
+				<ul>
+					<li>Ontario Secondary School Diploma</li>
+					<li>Grade 12 English (ENG4U) credit</li>
+					<li>Grade 12 Advanced Functions (MHF4U) credit</li>
+					<li>Grade 12 Calculus and Vectors (MCV4U) credit</li>
+					<li>Three additional Grade 12 university-level or university/college-level courses</li>
+					<li>A personal statement of experience</li>
+					<li>A grade average in at least the low 80s</li>
+				</ul>
+				<strong><h5>This program will award you a Bachelor of Computing degree.</h5></strong>
 			</td>
 		</tr>
 	</table>
@@ -330,14 +373,52 @@
 		<tr>
 		<td>
 			<header>
-				<h2>College Programs</h2>
+				<h2 style="text-align: center">College Programs</h2>
 			</header>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<p>This program is a 4 year program that studies computer science at the University of Toronto. They look for notations for describing computations, and programming methodologies that facilitate the production of manageable and efficient software. In the theory of computation area, they study resource requirements in time and memory of many basic computational tasks.</p>
+			<h4>Computer Programming at Humber College</h4>
+			<p>This program is a 2 year program that studies computer programming at Humber College. Your courses will include computer programming, systems analysis, web development, database management, information technology (IT), project management and other aspects of information systems. You will also learn the cycles of software development applications as follow the standards of planning, developing, testing and supporting.</p>
+			<strong><h5 style="text-align: center">Requirements</h5></strong>
+			<ul>
+				<li>Ontario Secondary School Diploma</li>
+				<li>Grade 12 English (ENG4U) or (ENG4C) credit</li>
+				<li>Grade 12 college-level or higher Math (MAP4C, MCT4C, MDM4U, MHF4U or MCV4U)</li>
+				<li>Two additional Grade 11 or 12 college-level or higher courses</li>
+				<li>Applicants who do not possess the required courses may complete admission testing to determine equivalencies</li>
+			</ul>
+			<strong><h5>This program will award you a Diploma.</h5></strong>
 		</td>
+		</tr>
+		<tr>
+			<td>
+				<h4>Computer Programming Analyst at George Brown College</h4>
+				<p>This program is a 3 year program that studies programming and analytics at George Brown College. During the first two years of the program you will develop the skills and techniques required for software application development and testing. The industry tells us they are looking for “the total package.” So the third year includes advanced technical skills in areas such as systems analysis and design techniques - and continues to develop communications, teamwork and other client service skills such as needs assessment, sales and presentation methods.</p>
+				<strong><h5 style="text-align: center">Requirements</h5></strong>
+				<ul>
+					<li>Ontario Secondary School Diploma</li>
+					<li>Grade 12 English (ENG4U) or (ENG4C) credit</li>
+					<li>One of the following courses: Grade 11 Functions and Applications (MCF3M), Grade 11 Functions (MCR3U), Grade 12 Foundations for College Mathematics (MAP4C), Grade 12 Mathematics for College Technology (MCT4C), Grade 12 Mathematics of Data Management (MDM4U), Grade 12 Advanced Functions (MHF4U) -or- Grade 12 Calculus and Vectors (MCV4U)</li>
+				</ul>
+				<strong><h5>This program will award you an Advanced Diploma.</h5></strong>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h4>Software Development at Mohawk College</h4>
+				<p>Students in the Computer Systems Technology - Software Development program will experience a broad range of application development and computer systems. Experience a broad range of application development and computer systems Excel in: - Programming languages, database development - Web tools and mobile application development - System/business analysis Discover information technology including : - E-commerce - Project Management - Mobile Technologies</p>
+				<strong><h5 style="text-align: center">Requirements</h5></strong>
+				<ul>
+					<li>Ontario Secondary School Diploma</li>
+					<li>Grade 12 English (ENG4U) or (ENG4C) credit</li>
+					<li>Grade 12 college-level or higher Math (MAP4C, MCT4C, MDM4U, MHF4U or MCV4U)</li>
+					<li>A minimum grade of 60% is required in Grade 12 Foundations for College Mathematics (MAP4C)</li>
+					<li>A working knowledge in computers and desktop applications</li>
+				</ul>
+				<strong><h5>This program will award you an Advanced Diploma.</h5></strong>
+			</td>
 		</tr>
 	</table>
 </div>
