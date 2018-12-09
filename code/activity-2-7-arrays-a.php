@@ -217,7 +217,7 @@
   </nav>
 	<div id="container">
     <header id="page_header">
-      <h1>Numeric Arrays</h1>
+      <h1>Train Cars (Numeric Arrays)</h1>
     </header>
     <h3>Background Information</h3>
     <p>An array is a variable that can hold multiple values in one single variable.  It is similar to a spreadsheet column.  Arrays are very useful for storing lists of items.</p>

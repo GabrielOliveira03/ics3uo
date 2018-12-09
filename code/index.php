@@ -310,12 +310,17 @@
 						<li><a href="activity-2-6b-ice-cream-cone.php">Activity 2.6b: Volume of an Ice Cream Cone</a></li>
 						<li><a href="activity-2-6c-terminal-velocity.php">Activity 2.6c: Terminal Velocity</a></li>
 						<li><a href="activity-2-6d-bmi.php">Activity 2.6d: Body Mass Index</a></li>
-						<li><a href="activity-2-7-arrays-a.php">Activity 2.7a: Numeric Arrays</a></li>
-						<li><a href="activity-2-7-arrays-b.php">Activity 2.7b: Associative Arrays</a></li>
-						<li><a href="activity-2-7-super-heros.php">Activity 2.7c: Multidimensional Arrays</a></li>
+						<li><a href="activity-2-7-arrays-a.php">Activity 2.7a: Train Arrays (Numeric)</a></li>
+						<li><a href="activity-2-7-arrays-b.php">Activity 2.7b: Gravity Arrays (Associative)</a></li>
+						<li><a href="activity-2-7-super-heros.php">Activity 2.7c: Superhero Arrays (Multidimensional)</a></li>
 					</ul>
 				</div>
-
+			</div>
+			<div class="activity-section">
+				<h3>Careers and Trends</h3>
+				<ul>
+					<li><a href="careers-in-computer-science.php">Careers in Computer Science</a></li>
+				</ul>
 			</div>
 		</div>
 

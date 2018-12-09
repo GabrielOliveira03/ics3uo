@@ -28,11 +28,14 @@
     }
 
     #container {
+			position: relative;
       display: block;
       margin: 0 auto;
       padding: 15px;
+			height: 100%;
       width: 960px;
       background-color: #f9fbfb;
+			overflow: auto;
     }
 
     #page_header {
@@ -121,13 +124,6 @@
       background-color: #eee;
     }
 
-    #stats {
-      margin: 1em 0;
-      width: 50%;
-      padding: 0;
-      text-align: center;
-    }
-
     .tile {
       display: inline-block;
       margin: 0 15px;
@@ -182,10 +178,73 @@
       color: #4287f4;
     }
 
-    #dice-guess label {
-      padding-right: 1em;
-      padding-left: 0.4em;
+		.team_cards {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin: 1em;
+				background-color: #2e5ea9;
+				padding: 1em;
+		}
+
+		.team_cards h2 {
+			width: 100%;
+			text-align: center;
+			margin-top: 0;
+			color: #fff;
+		}
+
+		.hero_card {
+			background-color: #ff8533;
+			flex: 0 1 14%;
+			padding: 0.6em 1em 0.2em 1em;
+			min-height: 162px;
+			border-left: 2px solid #fff;
+			border-top: 2px solid #fff;
+			border-right: 2px solid #b34800;
+			border-bottom: 2px solid #b34800;
+		}
+
+    .hero_card img {
+			height: 90px;
+			display: block;
+			margin: 0 auto;
     }
+
+		.hero_card h3 {
+			text-align: center;
+			color: #ffe682;
+			text-shadow: 2px 2px #b38f00;
+			margin: 0;
+		}
+
+		.team_cards .selected {
+			background-color: #b34800;
+		}
+
+		.fighters_call p {
+			border: 1px solid #2e5ea9;
+			color: #2e5ea9;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0.5em 0;
+		}
+
+		.skill_selections {
+			text-align: center;
+			border-bottom: 1px solid #2e5ea9;
+			padding-bottom: 1em;
+		}
+
+		.skill_selections div {
+			display: inline-block;
+			width: 10%;
+		}
+
+		.skill_selections div label {
+			color: #2e5ea9;
+		}
 
     fieldset {
       text-align: center;
@@ -198,10 +257,7 @@
     p, li {
       line-height: 20px;
     }
-    #output {
-      background-color: #f9fbfb;
-      border: 1px solid black;
-    }
+
 		hr {
 			padding: 0;
 			margin: 0 0 1em 0;
@@ -209,65 +265,81 @@
 			color: #4287f4;
 			border-bottom: 0.5px solid #4287f4;
 		}
+
+
+
+	  .center {
+	    margin-left: auto;
+	    margin-right: auto;
+	  }
+
+		.winner_message {
+			font-size: 2em;
+			font-weight: bold;
+			margin-right: 2em;
+		}
+		#universitytable {
+			position: absolute;
+			left: 30px;
+			border: 1px solid black;
+			background-color: #c7c8c8;
+			width: 450px;
+		}
+		#collegetable {
+			position: absolute;
+			right: 30px;
+			border: 1px solid black;
+			background-color: #c7c8c8;
+			width: 450px;
+		}
+
+
     </style>
 	</head>
+
   <body>
 		<nav>
     <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
   </nav>
+
 	<div id="container">
     <header id="page_header">
-      <h1>Acceleration of Planets (Associative Arrays)</h1>
+      <h1>Careers in Computer Science</h1>
     </header>
-    <h3>Background Information</h3>
-    <p>An associative array is also known as a map or dictionary array.  It is an abstract data type composed of a collection of key/value pairs.</p>
-    <p>In this assignment, I have assigned the planets of the solar system to one array, each with a corresponding acceleration in m/s&#178;. You can type in a range of accelerations, from the starting acceleration to the ending acceleration, and the program uses a for each loop to only display the planets that have accelerations within the range that you input.</p><hr />
-    <form name="form" action="activity-2-7-arrays-b.php" method="post" id="form">
-      Starting Acceleration (m/s&#178;): <input type="text" name="start" value="" /><br />
-      Ending Acceleration (m/s&#178;): <input type="text" name="end" value="" /><br /><br />
-      <input type="submit" name="submit" value="Show Planets" class="submit-btn btn btn-pill" /><br />
-    </form><br />
-    <?php
-    if ($_POST['submit']) {
-      if ($_POST['start'] < $_POST['end']) {
-      echo '<div id="output">';
-      $acceleration['Mercury'] = 3.76;
-      $acceleration['Venus'] = 9.04;
-      $acceleration['Earth'] = 9.8;
-      $acceleration['Mars'] = 3.77;
-      $acceleration['Jupiter'] = 23.6;
-      $acceleration['Saturn'] = 10.06;
-      $acceleration['Uranus'] = 8.87;
-      $acceleration['Neptune'] = 11.23;
-      $planet_image['Mercury'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/1200px-Mercury_in_color_-_Prockter07-edit1.jpg" style="height: 100px; width: 100px;" />';
-      $planet_image['Venus'] = '<img src="https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2014/whyisvenusso.jpg" style="height: 100px; width: 100px;" />';
-      $planet_image['Earth'] = '<img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2018/earthsoxygen.jpg" style="height: 100px; width: 100px;" />';
-      $planet_image['Mars'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/1200px-OSIRIS_Mars_true_color.jpg" style="height: 100px; width: 100px;" />';
-      $planet_image['Jupiter'] = '<img src="http://cdn.sci-news.com/images/enlarge3/image_4461e-Jupiter.jpg" style="height: 100px; width: 100px;" />';
-      $planet_image['Saturn'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/220px-Saturn_during_Equinox.jpg" style="height: 100px; width: 100px;" />';
-      $planet_image['Uranus'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/220px-Uranus2.jpg" style="height: 100px; width: 100px;" />';
-      $planet_image['Neptune'] = '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/220px-Neptune_Full.jpg" style="height: 100px; width: 100px;" />';
-      $start = $_POST['start'];
-      $end = $_POST['end'];
-      echo "<p>Planets with an acceleration of in between <strong>" . $start . "</strong>m/s&#178; and <strong>" . $end . "</strong>m/s&#178;</p>";
-      foreach ($acceleration  as $planet => $acc) {
-          if ($acc >= $start && $end >= $acc) {
-            echo "<div>";
-            echo "<p>Planet: <strong>" . $planet . "</strong>, Acceleration: <strong>" . $acc . "</strong>m/s&#178;</p>";
-            echo "" . $planet_image[$planet] . "";
-            echo "</div>";
-          } else {
-              echo "";
-          }
-        }
-        echo "</div>";
-      } else if ($_POST['start'] >= $_POST['end']) {
-        echo '<div id="output">';
-        echo "Error! Starting acceleration must be smaller than ending acceleration";
-        echo "</div>";
-      }
-    }
-     ?>
-  </div>
+		<h3>Information</h3>
+		<p>This page displays many jobs that require computer programming skills and universities and colleges that offer computer programming programs. Also, schooling requirements for these programs and the many oppurtunities available for a career in computer programming are displayed on this page.</p><hr />
+	<table id="universitytable">
+		<tr>
+		<td>
+				<h2>University Programs</h2>
+		</td>
+		</tr>
+		<tr>
+			<td>
+				<h4>Computer Science at University of Toronto</h4>
+				<p>This program is a 4 year program that studies computer science at the University of Toronto. They look for notations for describing computations, and programming methodologies that facilitate the production of manageable and efficient software. In the theory of computation area, they study resource requirements in time and memory of many basic computational tasks.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h4>Computer uee at uee university</h4>
+			</td>
+		</tr>
+	</table>
+	<table id="collegetable">
+		<tr>
+		<td>
+			<header>
+				<h2>College Programs</h2>
+			</header>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>This program is a 4 year program that studies computer science at the University of Toronto. They look for notations for describing computations, and programming methodologies that facilitate the production of manageable and efficient software. In the theory of computation area, they study resource requirements in time and memory of many basic computational tasks.</p>
+		</td>
+		</tr>
+	</table>
+</div>
 </body>
 </html>
