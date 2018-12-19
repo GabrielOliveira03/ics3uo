@@ -320,6 +320,7 @@
 				<h3>Careers and Trends</h3>
 				<ul>
 					<li><a href="careers-in-computer-science.php">Careers in Computer Science</a></li>
+					<li><a href="trends-in-computer-science.php">Trends in Computer Science</a></li>
 				</ul>
 			</div>
 		</div>
