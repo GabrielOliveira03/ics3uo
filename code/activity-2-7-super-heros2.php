@@ -14,6 +14,7 @@
       padding: 0;
       width: 100%;
     }
+
 		.home-button {
       background-color: #1e90ff;
       color: #ffffff;
@@ -22,6 +23,7 @@
       font-size: 16px;
       cursor: pointer;
     }
+
     body {
       font-family: "Futura";
       background-color: #fff;
@@ -282,9 +284,9 @@
     </style>
 	</head>
 
-  <body>
-		<nav>
-    <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
+<body>
+	<nav>
+    <a class="home-button" href="./index.php"><i class="fa fa-home">&nbsp;Home</i></a>
   </nav>
 
 	<div id="container">
