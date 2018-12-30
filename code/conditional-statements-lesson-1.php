@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Gabriel Oliveira: ICS3UO</title>
-		<meta name="description" content="Gabriel Oliveira's webpage for the ICS3UO course.">
-		<meta name="author" content="Gabriel Oliveira">
-		<link rel="shortcut icon" href="images/logo.ico">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+<head>
+  <meta charset="utf-8">
+  <title>Gabriel Oliveira: ICS3UO</title>
+  <meta name="description" content="Gabriel Oliveira's webpage for the ICS3UO course.">
+  <meta name="author" content="Gabriel Oliveira">
+  <link rel="shortcut icon" href="images/logo.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
       width: 100%;
+      Font-family: "Futura", Arial, sans-serif;
     }
 
-    body {
-      font-family: "Futura";
-      background-color: #fff;
-    }
-		.home-button {
+    .home-button {
+      position: absolute;
       background-color: #1e90ff;
       color: #ffffff;
       padding: 12px 16px;
@@ -27,28 +25,32 @@
       font-size: 16px;
       cursor: pointer;
     }
+
     #container {
       display: block;
       margin: 0 auto;
       padding: 15px;
       width: 960px;
-      background-color: #f9fbfb;
+      background-color: #ccc;
     }
 
     #page_header {
-      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #4287f4;
+      color: #4287f4;
+      padding: 0;
+      margin: 0 0 1em 0;
     }
 
     #page_header h1 {
-      padding: 0;
-      margin: 0 0 1em 0;
-      text-align: center;
-      color: #4287f4;
-      border-bottom: 1px solid #4287f4;
+      padding: 0 0 0.2em 0;;
+      margin: 0;
     }
 
-    #form {
-      width: 50%;
+    .lead {
+      font-size: 1.2em;
+      text-align: center;
+      color: #333;
     }
 
     .form-row {
@@ -57,36 +59,56 @@
       position: relative;
     }
 
-    .label {
+    .form-container {
+      width: 50%;
+      margin: 2em auto;
+      border: 1px solid #999;
+      padding-top: 1.4em;
+    }
+
+    form .center {
+      text-align: center;
+    }
+
+    form label {
       display: inline-block;
-      font-size: 18px;
-      line-height: 22px;
-      padding: 0;
-      margin: 5px;
-      width: 100%;
+      width: 60px;
+      font-weight: bold;
       color: #4287f4;
     }
 
-    .input-holder {
+    form input[type="text"] {
+      width: 160px;
+      padding: 5px 8px;
+      font-size: 1.2em;
+      color: #666;
+      border: none;
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 12%, from(#999), to(#fff));
+      background-image: -moz-lieanr-gradient(0% 12%, 90deg, #fff, #999);
+      background-color: #fff;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+    }
+
+    form input[type="text"]:focus {
+      -webkit-box-shadow: 0 0 12px rgba(51, 204, 255, 0.5);
+      -moz-box-shadow: 0 0 12px rgba(51, 204, 255, 0.5);
+      box-shadow: 0 0 12px rgba(51, 204, 255, 0.5);
+    }
+
+    .alert {
       position: relative;
+      padding: .75rem 1.25rem;
+      margin-bottom: 1rem;
+      border: 1px solid transparent;
+      border-radius: .25rem;
     }
 
-    .input-text {
-      width: 40%;
-      border: solid 1px #888;
-      box-shadow: 0 0 8px rgba(0, 153, 204, .0);
-      font-size: 18px;
-      line-height: 32px;
-      margin: 5px 0;
-      padding: 3px 10px;
-      -webkit-transition: box-shadow .3s linear;
-      transition: box-shadow .3s linear;
-    }
-
-    .error {
-      display: block;
-      vertical-align: middle;
-      color: #ff8532;
+    .alert-danger {
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
     }
 
     .required-info {
@@ -101,7 +123,7 @@
     .btn {
       text-decoration:none;
       color:#ffffff;
-      font-size:12px;
+      font-size: 28px;
       font-weight:bold;
       padding:0 15px;
       line-height:32px;
@@ -121,33 +143,19 @@
       background-color: #eee;
     }
 
-    #stats {
-      margin: 1em 0;
+    .student-info {
       width: 50%;
-      padding: 0;
-      text-align: center;
-    }
-
-    .tile {
-      display: inline-block;
-      margin: 0 15px;
-      width: 100px;
-      text-align: center;
+      margin: 0 auto;
+      background-color: #444;
+      padding: 1.2em 1.4em 0.2em 1.4em;
       color: #fff;
-      border: 1px solid #000;
+      border-radius: .25em;
+      box-shadow: 0.2em 0.2em 0.2em #333;
     }
 
-    .tile-label {
-      display: block;
-      background-color: #2e5da9;
-      padding: 15px;
-    }
-
-    .tile-content {
-      display: block;
-      background-color: #7397d0;
-      padding: 15px;
-      font-size: 2em;
+    .student-info-label {
+      color: #4287f4;
+      font-weight: bold;
     }
 
     .form-button {
@@ -187,58 +195,56 @@
       padding-left: 0.4em;
     }
 
-    fieldset {
-      text-align: center;
-    }
-
-    fieldset, p {
+    p {
       margin: 0 0 20px 0;
     }
 
     p, li {
       line-height: 20px;
     }
+
     #output {
       background-color: #f9fbfb;
       border: 1px solid black;
     }
-		hr {
-			padding: 0;
-			margin: 0 0 1em 0;
-			text-align: center;
-			color: #4287f4;
-			border-bottom: 0.5px solid #4287f4;
-		}
-	</style>
+
+    hr {
+      padding: 0;
+      margin: 0 0 1em 0;
+      text-align: center;
+      color: #4287f4;
+      border-bottom: 0.5px solid #4287f4;
+    }
+  </style>
 </head>
+
+
 <body>
 	<nav>
-    <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
+    <a class="home-button" href="./index.php"><i class="fa fa-home">&nbsp;Home</i></a>
   </nav>
+
 	<div id="container">
 		<header id="page_header">
-		<h1>"Making the Grade!"</h1>
-	</header>
-	<p>This is a mock student report.<br />
+      <h1>Making the Grade!</h1>
+    </header>
 
-		<!-- add user input form here-->
-		<form action="conditional-statements-lesson-1.php" method="post" class="math-form">
-			<!-- add user input fields  YOU MUST DO THIS FOR YOURSELF -->
-      Name: <label><input type="text" name="theName" value="" /><br /></label>
-      Mark: <label><input type="text" name="theMark" value="" /><br /></label><br />
-      <input type="submit" name="subBtn" value="Submit" class="submit-btn btn btn-pill"/>
-		</form>
+    <div class="lead">
+      <p>This is a mock student report.<br />
+    </div>
+
     <?
     // using if statements to automatically set the grade and comment
     if ($_POST['subBtn']) {
-    	// store the posted values from the form in variables
+      $error_message = "";
+      //store the posted values from the form in variables
     	$stu_name = $_POST['theName'];
     	$stu_mark = $_POST['theMark'];
       $special_comment = $_POST['specialcomment'];
 
     	if ($stu_name == "" OR $stu_mark == "") {
     		// show error statement if fields are left empty (simple error checking)
-    		echo "<p class='error'>You must include a name and mark!</p>";
+        $error_message = "You must include a name and mark!";
     	} else  {
     		// conditions for displaying grade and comment
         if ($stu_mark <=100 AND $stu_mark > 95) {
@@ -286,17 +292,43 @@
     			$letter_grade = "Unsuccessful";
     			$comment = "Fail!";
     		} else {
-    			$letter_grade = "<p class='error'>Invalid mark entered - must be between 0 and 100.</p>";
+    			$error_message  = "Invalid mark entered - must be between 0 and 100.";
     		}
     	}
     }
     ?>
 
-		Student's Name: </b> <? echo $stu_name; ?><br />
-		Student's Mark: </b> <? echo $stu_mark ?><br />
-		Letter Grade: </b> <? echo $letter_grade; ?><br />
-		Comment: </b> <? echo $comment; ?><br />
-		Special Comment: </b> <? echo $special_comment; ?></p>
+		<!-- add user input form here-->
+    <div class="form-container">
+      <form action="conditional-statements-lesson-1.php" method="post">
+        <!-- add user input fields  YOU MUST DO THIS FOR YOURSELF -->
+        <div class="form-row center">
+        <label for="theName">Name:</label> <input type="text" id="theName" name="theName" value="<?= $stu_name ?>" />
+        </div>
+        <div class="form-row center">
+        <label for="theMark">Mark:</label> <input type="text" id="theMark" name="theMark" value="<?= $stu_mark ?>" />
+        </div>
+        <div class="form-row center">
+          <input type="submit" name="subBtn" value="Submit" class="submit-btn btn btn-pill"/>
+        </div>
+      </form>
+    </div>
+
+    <? if ($_POST['subBtn']) {
+          if ($error_message) { ?>
+            <div class="alert alert-danger">
+              <?= $error_message  ?>
+            </div>
+        <? } else { ?>
+          <div class="student-info">
+            <p><span class="student-info-label">Student's Name:</span> <?= $stu_name; ?></p>
+            <p><span class="student-info-label">Student's Mark:</span> <?= $stu_mark; ?></p>
+            <p><span class="student-info-label">Letter Grade:</span> <?= $letter_grade; ?></p>
+            <p><span class="student-info-label">Comment:</span> <?= $comment; ?></p>
+            <p><span class="student-info-label">Special Comment:</span> <?= $special_comment; ?></p>
+          </div>
+      <?  }
+     } ?>
 
 </div>
 

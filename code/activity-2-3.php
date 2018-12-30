@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Gabriel Oliveira: ICS3UO</title>
-		<meta name="description" content="Gabriel Oliveira's webpage for the ICS3UO course.">
-		<meta name="author" content="Gabriel Oliveira">
-		<link rel="shortcut icon" href="images/logo.ico">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+<head>
+  <meta charset="utf-8">
+  <title>Gabriel Oliveira: ICS3UO</title>
+  <meta name="description" content="Gabriel Oliveira's webpage for the ICS3UO course.">
+  <meta name="author" content="Gabriel Oliveira">
+  <link rel="shortcut icon" href="images/logo.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
       width: 100%;
+      font-family: "Futura", Arial, sans-serif;
     }
 
-    body {
-      font-family: "Futura";
-      background-color: #ffffff;
+    h2 {
+      text-align: center;
+    }
+
+    .home-button {
+      position: absolute;
+      background-color: #1e90ff;
+      color: #ffffff;
+      padding: 12px 16px;
+      margin-left: 1em;
+      font-size: 16px;
+      cursor: pointer;
     }
 
     #container {
@@ -25,29 +35,51 @@
       margin: 0 auto;
       padding: 15px;
       width: 960px;
-      background-color: #f9fbfb;
+      background-color: #ccc;
     }
 
     #page_header {
-      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #4287f4;
+      color: #4287f4;
+      padding: 0;
+      margin: 0 0 1em 0;
     }
 
     #page_header h1 {
-      padding: 0;
-      margin: 0 0 1em 0;
-      text-align: center;
-      color: #4287f4;
-      border-bottom: 1px solid #4287f4;
+      padding: 0 0 0.2em 0;
+      margin: 0;
     }
 
-    #form {
+    .form-container {
       width: 50%;
+      margin: 2em auto;
+      border: 1px solid #999;
+      padding-top: 1.4em;
+    }
+
+    select {
+      width: 200px;
+      padding: 5px 8px;
+      font-size: 1.2em;
+      color: #666;
+      border: none;
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 12%, from(#999), to(#fff));
+      background-image: -moz-lieanr-gradient(0% 12%, 90deg, #fff, #999);
+      background-color: #fff;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
     }
 
     .form-row {
       padding-bottom: 10px;
       padding-right: 30px;
       position: relative;
+    }
+
+    .center {
+      text-align: center;
     }
 
     .label {
@@ -64,22 +96,30 @@
       position: relative;
     }
 
-    .input-text {
-      width: 40%;
-      border: solid 1px #888;
-      box-shadow: 0 0 8px rgba(0, 153, 204, .0);
-      font-size: 18px;
-      line-height: 32px;
-      margin: 5px 0;
-      padding: 3px 10px;
-      -webkit-transition: box-shadow .3s linear;
-      transition: box-shadow .3s linear;
+    .alert {
+      position: relative;
+      padding: .75rem 1.25rem;
+      margin-bottom: 1rem;
+      border: 1px solid transparent;
+      border-radius: .25rem;
     }
 
-    .error {
-      display: block;
-      vertical-align: middle;
-      color: #ff8532;
+    .alert-primary {
+      color: #004085;
+      background-color: #cce5ff;
+      border-color: #b8daff;
+    }
+
+    .alert-danger {
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+
+    .alert-info {
+      color: #0c5460;
+      background-color: #d1ecf1;
+      border-color: #bee5eb;
     }
 
     .required-info {
@@ -114,43 +154,6 @@
       background-color: #eee;
     }
 
-    #stats {
-      margin: 1em 0;
-      width: 50%;
-      padding: 0;
-      text-align: center;
-    }
-
-    .tile {
-      display: inline-block;
-      margin: 0 15px;
-      width: 100px;
-      text-align: center;
-      color: #fff;
-      border: 1px solid #000;
-    }
-		.home-button {
-      background-color: #1e90ff;
-      color: #ffffff;
-      padding: 12px 16px;
-      margin-left: 1em;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .tile-label {
-      display: block;
-      background-color: #2e5da9;
-      padding: 15px;
-    }
-
-    .tile-content {
-      display: block;
-      background-color: #7397d0;
-      padding: 15px;
-      font-size: 2em;
-    }
-
     .form-button {
       text-align: center;
     }
@@ -183,11 +186,6 @@
       color: #4287f4;
     }
 
-    #dice-guess label {
-      padding-right: 1em;
-      padding-left: 0.4em;
-    }
-
     fieldset {
       text-align: center;
     }
@@ -196,79 +194,88 @@
       margin: 0 0 20px 0;
     }
 
-    p, li {
-      line-height: 20px;
-			text-align: center;
-    }
     #output {
       background-color: #f9fbfb;
       border: 1px solid black;
     }
-		hr {
-			padding: 0;
-			margin: 0 0 1em 0;
-			text-align: center;
-			color: #4287f4;
-			border-bottom: 0.5px solid #4287f4;
-		}
-		.img {
-			display: block;
-    margin-left: auto;
-    margin-right: auto;
-		}
-    </style>
-	</head>
-  <body>
-		<nav>
-    <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
+
+    hr {
+      padding: 0;
+      margin: 0 0 1em 0;
+      text-align: center;
+      color: #4287f4;
+      border-bottom: 0.5px solid #4287f4;
+    }
+
+    .img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a class="home-button" href="./index.php"><i class="fa fa-home">&nbsp;Home</i></a>
   </nav>
-    <div id="container">
-		<header id="page_header">
-    	<h1 style="text-align: center">Days of the Week</h1>
-		</header>
-    <h2 style="text-align: center">Choose what day it is, and proceed to submit!</h2>
-    <form style="text-align: center" name="form" action="activity-2-3.php" method="post">
-      <select name="day">
-        <option value="">-Choose a day-</option>
-        <option value="Monday">Monday</option>
-        <option value="Tuesday">Tuesday</option>
-        <option value="Wednesday">Wednesday</option>
-        <option value="Thursday">Thursday</option>
-        <option value="Friday">Friday</option>
-        <option value="Saturday">Saturday</option>
-        <option value="Sunday">Sunday</option>
-      </select><br /><br />
-      <input type="submit" name="submit" value="Submit" class="submit-btn btn btn-pill" />
-    </form><br />
+
+
+  <div id="container">
+    <header id="page_header">
+      <h1>Days of the Week</h1>
+    </header>
+
+    <h2>Choose what day it is, and proceed to submit!</h2>
+
+    <div class="form-container">
+      <form name="form" action="activity-2-3.php" method="post">
+        <div class="form-row center">
+          <select name="day">
+            <option value="">-Choose a day-</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        </div>
+        <div class="form-row center">
+          <input type="submit" name="submit" value="Submit" class="submit-btn btn btn-pill" />
+        </div>
+      </form>
+    </div>
     <?php
       if ($_POST['submit']) {
         $day = $_POST['day'];
         if ($day == "") {
-          echo '<p id="p";><b>Please select a day of the week.</b></p>';
+          echo '<div class="alert alert-info">Please select a day of the week.</div>';
         } else if ($day == 'Monday') {
-          echo '<p class="p";><b>Argh, I am always tired on Monday!</b></p>';
+          echo '<div class="alert alert-primary center">Argh, I am always tired on Monday!</div>';
           echo '<img class="img" src="https://ih0.redbubble.net/image.130303932.7492/flat,550x550,075,f.u1.jpg" />';
         } else if ($day == 'Tuesday') {
-            echo '<p class="p";><b>Feels like Monday, but a bit better.</b></p>';
-            echo '<img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-QV_lqpQcS9HCRzNmVryYj3TSr2H9GN1Kcc6ouBavxwMhg1xPg" />';
+          echo '<div class="alert alert-primary center">Feels like Monday, but a little bit better.</div>';
+          echo '<img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz-QV_lqpQcS9HCRzNmVryYj3TSr2H9GN1Kcc6ouBavxwMhg1xPg" />';
         } else if ($day == 'Wednesday'){
-            echo '<p class="p";><b>It is halfway through the week!</b></p>';
-            echo '<img class="img" src="http://www.lovethispic.com/uploaded_images/125501-We-re-Halfway-There-.jpg" />';
+          echo '<div class="alert alert-primary center">It is halfway through the week!</div>';
+          echo '<img class="img" src="http://www.lovethispic.com/uploaded_images/125501-We-re-Halfway-There-.jpg" />';
         } else if ($day == 'Thursday'){
-            echo '<p class="p";><b>Thursday is like Friday Jr.</b></p>';
-            echo '<img class="img" src="https://images-na.ssl-images-amazon.com/images/I/61OXsB72fJL._SY450_.jpg" />';
+          echo '<div class="alert alert-primary center">Thursday is like Friday Jr.</div>';
+          echo '<img class="img" src="https://images-na.ssl-images-amazon.com/images/I/61OXsB72fJL._SY450_.jpg" />';
         } else if ($day == 'Friday'){
-            echo '<p class="p";><b>Last day of work before the weekend!</b></p>';
-            echo '<img class="img" src="https://www.promodo.com/wp-content/uploads/2015/06/1.jpg" />';
+          echo '<div class="alert alert-primary center">Last day of work before the weekend!</div>';
+          echo '<img class="img" src="https://www.promodo.com/wp-content/uploads/2015/06/1.jpg" />';
         } else if ($day == 'Saturday'){
-            echo '<p class="p";><b>Best day of the week. No alarm and no bedtime.</b></p>';
-            echo '<img class="img" src="http://www.lovethispic.com/uploaded_images/82817-Saturday-Best-Day-Of-The-Week.jpg" />';
+          echo '<div class="alert alert-primary center">Best day of the week. No alarm and no bedtime.</div>';
+          echo '<img class="img" src="http://www.lovethispic.com/uploaded_images/82817-Saturday-Best-Day-Of-The-Week.jpg" />';
         } else if ($day == 'Sunday'){
-            echo '<p class="p";><b>The weekend, but the day after is Monday.</b></p>';
-            echo '<img class="img" src="https://cdn.quotestopics.com/87/96/932731963-original.jpg" />';
+          echo '<div class="alert alert-primary center">The weekend, but the day after is Monday</div>';
+          echo '<img class="img" src="https://cdn.quotestopics.com/87/96/932731963-original.jpg" />';
         }
       }
      ?>
   </div>
-  </body>
+</body>
 </html>
