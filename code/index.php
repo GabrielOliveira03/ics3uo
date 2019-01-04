@@ -316,6 +316,7 @@
 					</ul>
 				</div>
 			</div>
+			<div class="activities-wrapper">
 			<div class="activity-section">
 				<h3>Careers and Trends</h3>
 				<ul>
@@ -323,7 +324,14 @@
 					<li><a href="trends-in-computer-science.php">Trends in Computer Science</a></li>
 				</ul>
 			</div>
+			<div class="activity-section">
+				<h3>Performance Tasks</h3>
+				<ul>
+					<li><a href="parcel-delivery-service.php">Parcel Delivery Service</a></li>
+					<li><a href="perftask-rock-paper-scissors.php">Rock, Paper, Scissors</a></li>
+				</ul>
 		</div>
+	</div>
 
 	</div>
 	<!-- /main content -->
