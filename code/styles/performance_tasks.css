@@ -190,3 +190,11 @@ form input[type="number"]:focus {
   clear: both;
   display: table;
 }
+.player {
+	width: 50%;
+	float: left;
+}
+.computer {
+	width: 50%;
+	float: left;
+}
