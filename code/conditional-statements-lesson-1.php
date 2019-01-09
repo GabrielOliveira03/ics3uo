@@ -303,10 +303,12 @@
       <form action="conditional-statements-lesson-1.php" method="post">
         <!-- add user input fields  YOU MUST DO THIS FOR YOURSELF -->
         <div class="form-row center">
-        <label for="theName">Name:</label> <input type="text" id="theName" name="theName" value="<?= $stu_name ?>" />
+          <label for="theName">Name:</label>
+          <input type="text" id="theName" name="theName" value="<?= $stu_name ?>" />
         </div>
         <div class="form-row center">
-        <label for="theMark">Mark:</label> <input type="text" id="theMark" name="theMark" value="<?= $stu_mark ?>" />
+          <label for="theMark">Mark:</label>
+          <input type="text" id="theMark" name="theMark" value="<?= $stu_mark ?>" />
         </div>
         <div class="form-row center">
           <input type="submit" name="subBtn" value="Submit" class="submit-btn btn btn-pill"/>
