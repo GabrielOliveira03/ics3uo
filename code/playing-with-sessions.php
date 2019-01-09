@@ -125,11 +125,35 @@ session_start();
 
 	.tile {
 		display: block;
+		float: left;
 		padding: 15px;
-		background-color: #075ce3;
+		margin: 1em;
 		width: 100px;
 		text-align: center;
 		color: #fff;
+		border: 1px solid transparent;
+	}
+
+	.tile-wins {
+		color: #004085;
+		background-color: #cce5ff;
+		border-color: #b8daff;
+	}
+
+	.tile-losses {
+		color: #721c24;
+		background-color: #f8d7da;
+		border-color: #f5c6cb;
+	}
+
+	.you-win {
+		color: #004085;
+		font-weight: bold;
+	}
+
+	.you-lose {
+		color: #721c24;
+		font-weight: bold;
 	}
 
 	.counter {
@@ -176,16 +200,23 @@ session_start();
   p, li {
     line-height: 20px;
   }
+
+	.clearfix::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
   </style>
 </head>
 <body>
 	<nav>
-    <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
+    <a class="home-button" href="./index.php"><i class="fa fa-home">&nbsp;Home</i></a>
   </nav>
   <div id="container">
     <header id="page_header">
 			<h1>PHP SESSIONS</h1>
 		</header>
+		<h2 class="lead">How many times can you roll the number 3?</h2>
 
 		<?php
 		// initialize wins and losses
@@ -204,20 +235,20 @@ session_start();
 			$_SESSION['wins'] = 0;
 			$_SESSION['losses'] = 0;
 			$_SESSION['total_rolls'] = 0;
-			$message1 = "The game has been reset.";
+			$message1 = "<p>The game has been reset.</p>";
 			$message2 = "&nbsp;";
 		} else {
 			// create a random number between 1 and 5.
 			$randNum = rand(1,5);
 
 			// show the random number
-			$message1 = "The random number is <strong>" . $randNum . "</strong>";
+			$message1 = "<p>The random number is <strong>" . $randNum . "</strong></p>";
 
 			if ($randNum == 3) {
-				$message2 = "The number equalled 3. YOU WIN!";
+				$message2 = "<p>The number equalled 3. <span class='you-win'>YOU WIN!</span></p>";
 				$_SESSION['wins']  = $_SESSION['wins']  + 1;
 			} else {
-				$message2 = "The number did not equal 3. YOU LOSE!";
+				$message2 = "<p>The number did not equal 3. <span class='you-lose'>YOU LOSE!</span></p>";
 				$_SESSION['losses']  = $_SESSION['losses']  + 1;
 			}
 			$_SESSION['total_rolls'] = $_SESSION['total_rolls'] + 1;
@@ -228,20 +259,26 @@ session_start();
 		?>
 
 		<div>
-			<p><?php echo $message1 ?></p>
+			<?= $message1 ?>
 
-			<p><?php echo $message2 ?></p>
+			<?= $message2 ?>
 		</div>
 
-		<div class="scoreboard-row">
-			<p class="tile">WINS: <?php echo $_SESSION['wins'] ?></p><p> |  LOSSES: <?php echo $_SESSION['losses'] ?></p>
+		<div class="scoreboard-row clearfix">
+			<p class="tile tile-wins">WINS: <?php echo $_SESSION['wins'] ?></p>
+			<p class="tile tile-losses">LOSSES: <?php echo $_SESSION['losses'] ?></p>
+		</div>
+
+		<div class="scoreboard-row clearfix">
+			<p class="tile tile-wins">PERCENTAGE OF WINS: <?php echo round($percentage_of_wins) ?>%</p>
+			<p class="tile tile-losses">PERCENTAGE OF LOSSES: <?php echo round($percentage_of_losses) ?>%</p>
 		</div>
 
 		<div>
-			<p>PERCENTAGE OF WINS: <?php echo round($percentage_of_wins) ?>% | PERCENTAGE OF LOSSES: <?php echo round($percentage_of_losses) ?>%</p>
-
-			<p><a class="btn pill" href='playing-with-sessions.php'>ROLL AGAIN</a><a class="btn pill" href='playing-with-sessions.php?reset=yes'>RESET</a></p>
+			<a class="btn pill" href='playing-with-sessions.php'>ROLL AGAIN</a>
+			<a class="btn pill" href='playing-with-sessions.php?reset=yes'>RESET</a>
 		</div>
+
 	</div>
 </body>
 </html>

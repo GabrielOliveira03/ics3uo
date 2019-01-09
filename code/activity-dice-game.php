@@ -208,7 +208,7 @@ session_start();
 
 <body>
 	<nav>
-    <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
+    <a class="home-button" href="./index.php"><i class="fa fa-home">&nbsp;Home</i></a>
   </nav>
 	<?php
 		//initialize variables and session
