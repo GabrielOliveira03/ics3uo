@@ -10,8 +10,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
-		html {
-			height: 100
+		body {
+			min-height: 100%;
 		}
 
 		body {
@@ -33,15 +33,6 @@
 			font-size: 16px;
 			cursor: pointer;
 		}
-
-		.home-button {
-      background-color: #1e90ff;
-      color: #ffffff;
-      padding: 12px 16px;
-      margin-left: 1em;
-      font-size: 16px;
-      cursor: pointer;
-    }
 
 		#container {
 			position: relative;
@@ -281,9 +272,8 @@
 			if ($_POST['submit']) {
 				if (empty($num1) || empty($num2)) {
 					$error_message .= "<p>Error! There must be a first and second number!</p>";
-				//} else if ($num1 >= 4 || $num2 <= 6) {
-			//		echo "here";
-		  //  	$error_message .= "<p>Error! Number 1 must be lower than 4 and Number 2 must be higher than 6!</p>";
+				} else if ($num1 >= 4 || $num2 <= 6) {
+		    	$error_message .= "<p>Error! Number 1 must be lower than 4 and Number 2 must be higher than 6!</p>";
 		  	}
 			}
 		?>

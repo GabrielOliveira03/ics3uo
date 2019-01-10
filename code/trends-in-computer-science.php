@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles/Skeleton-2.0.4/css/normalize.css">
   <link rel="stylesheet" href="styles/Skeleton-2.0.4/css/skeleton.css">
-	<!--link rel="stylesheet" href="styles/gabriels_stylesheet.css"-->
 
 	<style>
 		body {

@@ -1,252 +1,32 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-.home-button {
-  background-color: #1e90ff;
-  color: #ffffff;
-  padding: 12px 16px;
-  margin-left: 1em;
-  font-size: 16px;
-  cursor: pointer;
+/* Base */
+html {
+  min-height: 100%;
 }
 
 body {
-  font-family: "Futura";
-  background-color: #fff;
-}
-
-#container {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  padding: 15px;
   height: 100%;
-  width: 960px;
-  background-color: #f9fbfb;
-}
-
-#page_header {
-  width: 100%;
-}
-
-#page_header h1 {
-  padding: 0;
-  margin: 0 0 1em 0;
-  text-align: center;
-  color: #4287f4;
-  border-bottom: 1px solid #4287f4;
-}
-
-#form {
-  width: 50%;
-}
-
-.form-row {
-  padding-bottom: 10px;
-  padding-right: 30px;
-  position: relative;
-}
-
-.label {
-  display: inline-block;
-  font-size: 18px;
-  line-height: 22px;
-  padding: 0;
-  margin: 5px;
-  width: 100%;
-  color: #4287f4;
-}
-
-.input-holder {
-  position: relative;
-}
-
-.input-text {
-  width: 40%;
-  border: solid 1px #888;
-  box-shadow: 0 0 8px rgba(0, 153, 204, .0);
-  font-size: 18px;
-  line-height: 32px;
-  margin: 5px 0;
-  padding: 3px 10px;
-  -webkit-transition: box-shadow .3s linear;
-  transition: box-shadow .3s linear;
-}
-
-.error {
-  display: block;
-  vertical-align: middle;
-  color: #ff8532;
-}
-
-.required-info {
-  text-align: center;
-  width: 40%;
-}
-
-.required-info span {
-  color: #ff8532;
-}
-
-.btn {
-  text-decoration:none;
-  color:#ffffff;
-  font-size:12px;
-  font-weight:bold;
-  padding:0 15px;
-  line-height:32px;
-  height: auto;
-  display:inline-block;
-  text-align:center;
-  background-color:#ff8532;
-  width: auto;
-}
-
-.btn:hover {
-  background-color: #ff9f5d;
-  cursor: pointer;
-}
-
-.btn:active {
-  background-color: #eee;
-}
-
-.tile {
-  display: inline-block;
-  margin: 0 15px;
-  width: 100px;
-  text-align: center;
-  color: #fff;
-  border: 1px solid #000;
-}
-
-.tile-label {
-  display: block;
-  background-color: #2e5da9;
-  padding: 15px;
-}
-
-.tile-content {
-  display: block;
-  background-color: #7397d0;
-  padding: 15px;
-  font-size: 2em;
-}
-
-.form-button {
-  text-align: center;
-}
-
-.btn.pill{
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
-}
-
-.submit-btn {
-  background: rgba(1, 119, 104, 0);
-  border: 3px solid rgba(255, 133, 50, 1);
-  border-radius: 8px;
-  color: rgba(255, 133, 50, 1);
-  cursor: pointer;
-  font-size: 20px;
-  line-height: 30px;
-  outline: 0;
-  -webkit-transition: background .2s linear, color .2s linear;
-  transition: background .2s linear, color .2s linear;
-}
-
-.submit-btn:hover {
-  background: rgba(255, 133, 50, 1);
-  color: rgba(255, 255, 255, 1);
-}
-
-.success-message {
-  color: #4287f4;
-}
-
-.team_cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 1em;
-    background-color: #2e5ea9;
-    padding: 1em;
-}
-
-.team_cards h2 {
-  width: 100%;
-  text-align: center;
-  margin-top: 0;
-  color: #fff;
-}
-
-.hero_card {
-  background-color: #ff8533;
-  flex: 0 1 14%;
-  padding: 0.6em 1em 0.2em 1em;
-  min-height: 162px;
-  border-left: 2px solid #fff;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #b34800;
-  border-bottom: 2px solid #b34800;
-}
-
-.hero_card img {
-  height: 90px;
-  display: block;
-  margin: 0 auto;
-}
-
-.hero_card h3 {
-  text-align: center;
-  color: #ffe682;
-  text-shadow: 2px 2px #b38f00;
   margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Futura", Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
 }
 
-.team_cards .selected {
-  background-color: #b34800;
+form {
+  width: 60%;
 }
 
-.fighters_call p {
-  border: 1px solid #2e5ea9;
-  color: #2e5ea9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5em 0;
-}
-
-.skill_selections {
-  text-align: center;
-  border-bottom: 1px solid #2e5ea9;
-  padding-bottom: 1em;
-}
-
-.skill_selections div {
-  display: inline-block;
-  width: 10%;
-}
-
-.skill_selections div label {
-  color: #2e5ea9;
-}
-
-fieldset {
-  text-align: center;
-}
-
-fieldset, p {
+p {
   margin: 0 0 20px 0;
 }
 
 p, li {
   line-height: 20px;
+}
+
+h1, h2 {
+  color: #4287f4;
 }
 
 hr {
@@ -257,36 +37,198 @@ hr {
   border-bottom: 0.5px solid #4287f4;
 }
 
-
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.winner_message {
-  font-size: 2em;
-  font-weight: bold;
-  margin-right: 2em;
-}
-#universitytable {
-  position: absolute;
-  left: 30px;
-  border: 1px solid black;
-  background-color: #c7c8c8;
-  width: 450px;
-  table-layout: fixed;
-  height: 100%;
-}
-#collegetable {
-  position: absolute;
-  right: 30px;
-  border: 1px solid black;
-  background-color: #c7c8c8;
-  width: 450px;
-  table-layout: fixed;
-  height: 100%;
-}
-h4, h5 {
+/* Layout */
+#page-header {
   text-align: center;
+  border-bottom: 1px solid #4287f4;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+
+#page-header h1 {
+  padding: 0 0 0.2em 0;;
+  margin: 0;
+}
+
+.home-button {
+  position: absolute;
+  background-color: #1e90ff;
+  color: #ffffff;
+  padding: 12px 16px;
+  margin-left: 1em;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  color: #1e90ff;
+  background-color: #0169ce;
+}
+
+#container {
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  width: 960px;
+  background-color: #ccc;
+}
+
+.submit-btn {
+  background-color: #fff;
+  border: 3px solid rgba(255, 133, 50, 1);
+  border-radius: 8px;
+  color: rgba(255, 133, 50, 1);
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.2em 1.2em;
+  width: auto;
+  line-height: 1.6em;
+  outline: 0;
+  -webkit-transition: background .2s linear, color .2s linear;
+  transition: background .2s linear, color .2s linear;
+}
+
+.submit-btn:hover {
+  background: rgba(255, 133, 50, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+a.btn {
+  text-decoration:none;
+  color: rgba(255, 133, 50, 1);
+  font-size: 1.2em;
+  font-weight: bold;
+  padding:0 15px;
+  line-height:32px;
+  height: auto;
+  display:inline-block;
+  text-align:center;
+  background-color:#ff8532;
+  width: auto;
+}
+
+a.btn:hover {
+  background-color: #ff9f5d;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: #eee;
+}
+
+.btn.pill{
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+
+/* Module */
+.lead {
+  font-size: 1.2em;
+}
+
+.form-buttons {
+  text-align: center;
+  margin: 1em;
+}
+
+.horizontal-controls {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 0.4em;
+}
+
+.horizontal-controls label {
+  text-align: right;
+}
+
+form label {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 2.2em;
+  font-weight: bold;
+  color: #4287f4;
+}
+
+form input[type="text"] {
+  padding: 5px 8px;
+  font-size: 1.2em;
+  color: #333;
+  border: none;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 12%, from(#999), to(#fff));
+  background-image: -moz-lieanr-gradient(0% 12%, 90deg, #fff, #999);
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+form input[type="text"]:focus {
+  -webkit-box-shadow: 0 0 12px rgba(51, 204, 255, 0.5);
+  -moz-box-shadow: 0 0 12px rgba(51, 204, 255, 0.5);
+  box-shadow: 0 0 12px rgba(51, 204, 255, 0.5);
+}
+
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+/*
+.required-info {
+  text-align: center;
+  width: 40%;
+}
+
+.required-info span {
+  color: #ff8532;
+}
+
+/* State */
+
+/* Theme */
+.mandatory-fields-note {
+  font-style: italic;
+  color: #ff5300;
+}
+
+.output-info {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #444;
+  padding: 1.2em 1.4em 0.2em 1.4em;
+  color: #fff;
+  border-radius: .25em;
+  box-shadow: 0.2em 0.2em 0.2em #333;
+}
+
+.output-info-label {
+  color: #4287f4;
+  font-weight: bold;
+}
+
+.ghost-image {
+  width: 0.8em;
 }
