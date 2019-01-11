@@ -19,7 +19,7 @@
 
 		if ($_POST['submit']) {
 			if (empty($starting_temperature) || empty($ending_temperature)) {
-				$error_message .= "<p>Starting and ending termperatures are mandatory!</p>";
+				$error_message .= "<p>Starting and ending temperatures are mandatory!</p>";
 			} else if ($starting_temperature <= $ending_temperature) {
 				$error_message .= "<p>Starting temperature must be higher than ending temperature!</p>";
 			}

@@ -8,44 +8,58 @@
 		<link rel="shortcut icon" href="images/logo.ico">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
+		html {
+		  min-height: 100%;
+		}
+
+		body {
+		  height: 100%;
+		  margin: 0;
+		  padding: 0;
+		  width: 100%;
+		  font-family: "Futura", Arial, sans-serif;
+		  background-color: #fff;
+		  color: #333;
+		}
+
+		h1, h2 {
+		  color: #4287f4;
+		}
+
+		#page-header {
+		  text-align: center;
+		  border-bottom: 1px solid #4287f4;
+		  padding: 0;
+		  margin: 0 0 1em 0;
+		}
+
+		#page-header h1 {
+		  padding: 0 0 0.2em 0;;
+		  margin: 0;
+		}
+
 		.home-button {
-      background-color: #1e90ff;
-      color: #ffffff;
-      padding: 12px 16px;
-      margin-left: 1em;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    body {
-      font-family: "Futura";
-      background-color: #fff;
-    }
+		  position: absolute;
+		  background-color: #1e90ff;
+		  color: #ffffff;
+		  padding: 12px 16px;
+		  margin-left: 1em;
+		  font-size: 16px;
+		  cursor: pointer;
+		}
 
-    #container {
-      display: block;
-      margin: 0 auto;
-      padding: 15px;
-      width: 960px;
-      background-color: #f9fbfb;
-    }
+		.home-button:hover {
+		  color: #1e90ff;
+		  background-color: #0169ce;
+		}
 
-    #page_header {
-      width: 100%;
-    }
-
-    #page_header h1 {
-      padding: 0;
-      margin: 0 0 1em 0;
-      text-align: center;
-      color: #4287f4;
-      border-bottom: 1px solid #4287f4;
-    }
+		#container {
+		  display: block;
+		  margin: 0 auto;
+		  padding: 15px;
+		  width: 960px;
+		  background-color: #ccc;
+		}
 
     #form {
       width: 50%;
@@ -99,7 +113,7 @@
     }
 
     .btn {
-      text-decoration:none;
+      text-decoration: none;
       color:#ffffff;
       font-size:12px;
       font-weight:bold;
@@ -154,7 +168,7 @@
     }
 
     .submit-btn {
-      background: rgba(1, 119, 104, 0);
+      background: rgba(255, 255, 255, 1);
       border: 3px solid rgba(255, 133, 50, 1);
       border-radius: 8px;
       color: rgba(255, 133, 50, 1);
@@ -256,11 +270,11 @@
     }
 
 		hr {
-			padding: 0;
-			margin: 0 0 1em 0;
-			text-align: center;
-			color: #4287f4;
-			border-bottom: 0.5px solid #4287f4;
+		  padding: 0;
+		  margin: 0 0 1em 0;
+		  text-align: center;
+		  color: #4287f4;
+		  border-bottom: 0.5px solid #4287f4;
 		}
 
     table, th, td {
@@ -284,16 +298,23 @@
 
   <body>
 		<nav>
-    <a class="home-button" href="https://icsprogramming.ca/2018-2019/oliveiraff730/index.php"><i class="fa fa-home">&nbsp;Home</i></a>
-  </nav>
+    	<a class="home-button" href="./index.php"><i class="fa fa-home">&nbsp;Home</i></a>
+  	</nav>
 
 	<div id="container">
-    <header id="page_header">
+    <header id="page-header">
       <h1>Superhero Battle (Multidimensional Arrays)</h1>
     </header>
-		<h3>Background Information</h3>
-		<p>This assignment uses multidimensional arrays. One hero on each team is randomly chosen to 'battle', and the player chooses whichever skill will be taken into consideration. Each hero has their own skill points for all 3 skills, so therefore a hero can win or lose when different skills are compared. Choose between strength, speed or smarts and see which hero wins in that certain category.</p><hr />
-    <?
+
+		<h2>Background Information</h2>
+
+		<p class="lead">
+			This assignment uses multidimensional arrays. One hero on each team is randomly chosen to 'battle', and the player chooses whichever skill will be taken into consideration. Each hero has their own skill points for all 3 skills, so therefore a hero can win or lose when different skills are compared. Choose between strength, speed or smarts and see which hero wins in that certain category.
+		</p>
+
+		<hr>
+
+		<?
 			$team1 = [];
 			$team1[] = ["Batman", "strength" => 3, "speed" => 3, "smarts" => 4, "img" => "batman.png"];
 			$team1[] = ["Superman", "strength" => 4, "speed" => 3, "smarts" => 3, "img" => "superman.png"];

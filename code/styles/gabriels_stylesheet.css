@@ -17,10 +17,6 @@ form {
   width: 60%;
 }
 
-p {
-  margin: 0 0 20px 0;
-}
-
 p, li {
   line-height: 1.5em;;
 }
@@ -137,6 +133,11 @@ a.btn:hover {
   margin: 1em;
 }
 
+.multiple-buttons > .btn {
+  float: left;
+  margin: 0.4em 0.2em;
+}
+
 .horizontal-controls {
   display: grid;
   grid-template-columns: max-content max-content;
@@ -174,12 +175,35 @@ form input[type="text"]:focus {
   box-shadow: 0 0 12px rgba(51, 204, 255, 0.5);
 }
 
+select {
+  display: inline;
+  font-size: 1.2em;
+  color: #666;
+  border: none;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 12%, from(#999), to(#fff));
+  background-image: -moz-lieanr-gradient(0% 12%, 90deg, #fff, #999);
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+select:focus-within {
+  -webkit-box-shadow: 0 0 12px rgba(51, 204, 255, 1);
+  -moz-box-shadow: 0 0 12px rgba(51, 204, 255, 1);
+  box-shadow: 0 0 12px rgba(51, 204, 255, 1);
+}
+
 .alert {
   position: relative;
   padding: .75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: .25rem;
+}
+
+.alert p {
+  margin: 0;
 }
 
 .alert-success {
@@ -199,8 +223,6 @@ form input[type="text"]:focus {
   background-color: #d1ecf1;
   border-color: #bee5eb;
 }
-
-/* State */
 
 /* Theme */
 .mandatory-fields-note {
@@ -248,4 +270,56 @@ form input[type="text"]:focus {
 .image-centered {
   text-align: center;
   margin-bottom: 1em;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Activity specific */
+.activity2-7-img {
+  width: 200px;
+}
+
+.train {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 0.4em;
+}
+
+.train .train-car {
+  text-align: center;
+  background-color: #fff;
+  color: #4287f4;
+  border-radius: .25em;
+  box-shadow: 0.2em 0.2em 0.2em #333;
+}
+
+.train-car img {
+  width: 50px;
+}
+
+.planets .planet {
+  float: left;
+  text-align: center;
+  margin: 0.4em;
+  background-color: #000;
+  color: #ccc;
+  border-radius: .25em;
+  box-shadow: 0.2em 0.2em 0.2em #333;
+}
+
+.planet-name {
+  margin: 0;
+  margin-top: 1em;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #4287f4;
+}
+
+.planets img {
+  height: 80px;
 }
