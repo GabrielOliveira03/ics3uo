@@ -15,6 +15,7 @@
 		$starting_temperature = $_POST['starting_temperature'];
 		$ending_temperature = $_POST['ending_temperature'];
 		$increment = $_POST['increment'];
+		$error_message = "";
 
 		if ($_POST['submit']) {
 			if (empty($starting_temperature) || empty($ending_temperature)) {
@@ -81,7 +82,7 @@
 					</div>
 			<? } else { ?>
 				<div class="output-info">
-					<table>
+					<table class="table">
 						<thead>
 							<tr>
 								<th>Celsius</th>

@@ -29,6 +29,10 @@ h1, h2 {
   color: #4287f4;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 hr {
   padding: 0;
   margin: 0 0 1em 0;
@@ -196,16 +200,6 @@ form input[type="text"]:focus {
   border-color: #bee5eb;
 }
 
-/*
-.required-info {
-  text-align: center;
-  width: 40%;
-}
-
-.required-info span {
-  color: #ff8532;
-}
-
 /* State */
 
 /* Theme */
@@ -229,6 +223,29 @@ form input[type="text"]:focus {
   font-weight: bold;
 }
 
+.table {
+  width: 100%;
+  margin-bottom: 1em;
+  background-color: transparent;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table td, .table th {
+  padding: .75em;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
 .ghost-image {
   width: 0.8em;
+}
+
+.image-centered {
+  text-align: center;
+  margin-bottom: 1em;
 }
