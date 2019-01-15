@@ -330,6 +330,7 @@
 					<li><a href="parcel-delivery-service.php">Parcel Delivery Service</a></li>
 					<li><a href="perftask-rock-paper-scissors.php">Rock, Paper, Scissors</a></li>
 					<li><a href="performance-task-newtons-method.php">Newton's Method</a></li>
+					<li><a href="s-p-flowchart-algorithm.php">Flowcharts and Algorithms</a></li>
 				</ul>
 		</div>
 	</div>

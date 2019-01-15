@@ -281,7 +281,7 @@
           <p><span class="user-response-label">Total Cost:</span> <?= $costData["subtotal"]; ?></p>
         </div>
         <div class="alert alert-success">
-        A confirmationn email has been sent to <?= $email ?>.
+        A confirmation email has been sent to <?= $email ?>.
         </div>
         <? sendEmail($fullname, $email, $length, $width, $height, $costData["vol"], $mass, $costData["total"]) ?>
         <? } else { ?>
