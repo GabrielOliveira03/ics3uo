@@ -73,6 +73,29 @@ h3 {
 	width: 40%;
 }
 
+
+#newtons-method img.left {
+	width: 30%;
+	float: left;
+	display: inline-block;
+}
+
+.newton-method-flowchart img {
+	width: 90%;
+}
+
+.newton-method-flowchart {
+	display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.4em;
+}
+
+.newtons-method-form {
+	width: 50%;
+	margin: 0 auto;
+}
+
+
 .form-row {
   padding-bottom: 10px;
   padding-right: 30px;
@@ -190,10 +213,12 @@ form input[type="number"]:focus {
   clear: both;
   display: table;
 }
+
 .player {
 	width: 50%;
 	float: left;
 }
+
 .computer {
 	width: 50%;
 	float: left;

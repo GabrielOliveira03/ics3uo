@@ -11,14 +11,15 @@
 </head>
 <body>
 	<?
-	function isPrimeX($n){
-		for ($x = 2; $x <= $n/2; $x++) {
-				if ($n % $x == 0){
-						return 0;
-				}
+		function isPrimeX($n){
+			for ($x = 2; $x <= $n/2; $x++) {
+					if ($n % $x == 0){
+							return 0;
+					}
+			}
+			return 1;
 		}
-		return 1;
-}
+
 		function isPrime($number) {
 			// 1 is not prime
 			if ( $number == 1 ) {
@@ -82,80 +83,10 @@
     <?php
 
     if ($_POST['submit']) {
-			echo "Initial p: $p, Initial s: $s<br />";
 
-			do {
-
-				do {
-
-					if (isEven($p)) {
-						$p = $p + 1;
-					}
-
-					if (!isPrimeX($p)) {
-						$p = $p + 2;
-					}
-
-				} while (!isPrime($p));
-
-				if ($p < $s) {
-					$s = $s - $p;
-					$p = $p + 2;
-				} else {
-					$s = $s - 1;
-
-					if ($s == 0) {
-						$stop = true;
-					} else {
-						$p = $p + 2;
-					}
-
-				}
-				echo "&#8595;<br />";
-				echo "(p: $p, s: $s)<br />";
-
-
-			} while (!$stop);
 
 
 		}
-
-		// 	do {
-		// 		echo "<p>p: $p\n";
-		// 		echo "s: $s</p>";
-		//
-		// 		do {
-		//
-		// 			do {
-		//
-		// 				if (isEven($p)) {
-		// 					$p += 1;
-		// 				}
-		//
-		// 				if (!isPrime($p)) {
-		// 						$p += 2;
-		// 				}
-		//
-		// 			} while (!isPrime($p));
-		//
-		// 			if ($p < $s) {
-		// 				$s -= $p;
-		// 				$p += 2;
-		// 			}
-		//
-		// 		} while ($p <= $s);
-		//
-		// 		$s -= 1;
-		//
-		// 		if ($s != 0) {
-		// 			$p += 2;
-		// 		}
-		//
-		// 	} while ($s > 0);
-		//
-		// 	echo "<p>p: $p\n";
-		// 	echo "s: $s</p>";
-		//}
 
      ?>
 
@@ -167,9 +98,48 @@
  					</div>
  			<? } else { ?>
  				<div class="user-response">
- 					<h4>
- 						After completing the flowchart, P is now <?= $p ?>.
- 					</h4>
+					<h3>Initial (p, s): <strong>(<?= $p ?>, <?= $s ?>)</strong></h3>
+					<p>
+						Steps: (<?= $p ?>, <?= $s ?>)
+					<?
+
+					do {
+						echo " &raquo; ";
+
+						do {
+
+							if (isEven($p)) {
+								$p = $p + 1;
+							}
+
+							if (!isPrimeX($p)) {
+								$p = $p + 2;
+							}
+
+						} while (!isPrime($p));
+
+						if ($p < $s) {
+							$s = $s - $p;
+							$p = $p + 2;
+						} else {
+							$s = $s - 1;
+
+							if ($s == 0) {
+								$stop = true;
+							} else {
+								$p = $p + 2;
+							}
+
+						}
+						echo "($p, $s)";
+
+
+					} while (!$stop);
+					?>
+				</p>
+ 					<p>
+ 						After completing the flowchart, final value of P is <strong><?= $p ?></strong>.
+ 					</p>
  				</div>
  			<? }
  		}
